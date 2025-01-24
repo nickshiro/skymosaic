@@ -7,7 +7,9 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			fallback: 'app.html'
+			fallback: 'app.html',
+			pages: 'build',
+			assets: 'build'
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/skymosaic' : ''

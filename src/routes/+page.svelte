@@ -4,7 +4,7 @@
 	import { RightBar } from '@widgets/rightbar';
 </script>
 
-<div class="relative h-screen justify-between overflow-scroll bg-primary">
+<div class="relative h-screen justify-between bg-primary">
 	<LeftBar />
 	<main class="flex h-screen items-center justify-center">
 		<div class="h-[90%]">

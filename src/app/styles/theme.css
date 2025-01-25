@@ -1,0 +1,10 @@
+:root {
+	--primary-bg: #1e1e1e;
+	--secondary-bg: #fff;
+	--text-primary: #181818;
+	--text-secondary: #bebebe;
+	--border: #0000001a;
+	--input-bg: #f5f5f5;
+	--input-selection-bg: var(--primary-bg);
+	--input-selection-text: white;
+}

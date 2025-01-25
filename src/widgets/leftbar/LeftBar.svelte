@@ -1,0 +1,35 @@
+<script>
+	import { Header } from '@shared/ui/header';
+	import { Subtitle } from '@shared/ui/subtitle';
+	import { TextInput } from '@shared/ui/text-input';
+	import { Hr } from '@shared/ui/hr';
+</script>
+
+<aside
+	class="border-border bottom-0] fixed left-0 top-0 z-50 box-border flex h-screen w-60 scale-100 transform flex-col items-stretch justify-between overflow-hidden border-r bg-secondary"
+>
+	<div>
+		<h1 class="font-primary select-none py-2 pl-4 text-xl">Skymosaic</h1>
+		<Hr />
+		<div class="mb-3">
+			<Header>Coordinates</Header>
+			<Subtitle>Latitude</Subtitle>
+			<TextInput maxlength={10} icon="Y"></TextInput>
+		</div>
+		<div class="mb-4 mt-2">
+			<Subtitle>Longitude</Subtitle>
+			<TextInput maxlength={11} icon="X"></TextInput>
+		</div>
+		<div class="mb-3 mt-2">
+			<Hr />
+			<Header>Signature</Header>
+			<Subtitle>Header</Subtitle>
+			<TextInput maxlength={80} icon="T"></TextInput>
+		</div>
+		<div class="mb-4 mt-2">
+			<Subtitle>Subtitle</Subtitle>
+			<TextInput maxlength={80} icon="T"></TextInput>
+		</div>
+		<Hr />
+	</div>
+</aside>

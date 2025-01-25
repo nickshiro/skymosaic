@@ -2,6 +2,8 @@
 	import { Header } from '@shared/ui/header';
 	import { Subtitle } from '@shared/ui/subtitle';
 	import { TextInput } from '@shared/ui/text-input';
+	import { DateInput } from '@shared/ui/date-input';
+	import { TimeInput } from '@shared/ui/time-input';
 	import { Hr } from '@shared/ui/hr';
 </script>
 
@@ -19,6 +21,16 @@
 		<div class="mb-4 mt-2">
 			<Subtitle>Longitude</Subtitle>
 			<TextInput maxlength={11} icon="X"></TextInput>
+		</div>
+		<div class="mb-3 mt-2">
+			<Hr />
+			<Header>Date and time</Header>
+			<Subtitle>Date</Subtitle>
+			<DateInput />
+		</div>
+		<div class="mb-4 mt-2">
+			<Subtitle>Time</Subtitle>
+			<TimeInput />
 		</div>
 		<div class="mb-3 mt-2">
 			<Hr />

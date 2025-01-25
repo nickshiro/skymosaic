@@ -1,9 +1,12 @@
-const paperContext = $state({
-	date: '12 Aug 2024',
-	time: '3:00',
+import { writable } from 'svelte/store';
+
+const paperContext = writable({
+	date: '2024-09-12',
+	time: '03:00',
 	latitude: 59.855774,
 	longitude: 31.410969,
-	header: 'Here, we found each other'
+	header: 'Under this sky, I found you',
+	subtitle: ''
 });
 
 export { paperContext };

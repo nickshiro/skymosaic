@@ -1,5 +1,6 @@
 <script lang="ts">
-	let { icon, maxlength } = $props();
+	let { icon, maxlength, identifier } = $props();
+	import { paperContext } from '@shared/context/paper.svelte';
 </script>
 
 <div class="relative my-auto ml-4 mr-2 mt-1 box-border h-8">
@@ -12,6 +13,7 @@
 	</div>
 	<input
 		{maxlength}
+		bind:value={$paperContext[identifier]}
 		type="text"
 		class="leading-2 focus:border-border bg-input-bg selection:bg-input-selection-bg selection:text-input-selection-text box-border h-full w-full rounded-lg border border-transparent pl-6 pr-2 align-middle text-[14px] font-normal outline-none"
 	/>

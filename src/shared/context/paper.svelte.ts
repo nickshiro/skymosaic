@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
 const paperContext = writable({
-	date: '2024-09-12',
+	date: '2024-08-09',
 	time: '03:00',
 	latitude: 59.855774,
 	longitude: 31.410969,

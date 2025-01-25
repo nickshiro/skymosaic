@@ -12,7 +12,7 @@
 		<div class="mb-3">
 			<Header>Colors</Header>
 			<Subtitle>Latitude</Subtitle>
-			<TextInput maxlength={10} icon="Y"></TextInput>
+			<!-- <TextInput maxlength={10} icon="Y"></TextInput> -->
 		</div>
 	</div>
 	<div>

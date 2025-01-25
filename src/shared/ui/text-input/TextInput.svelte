@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	let { icon, maxlength, identifier } = $props();
 	import { paperContext } from '@shared/context/paper.svelte';
 </script>

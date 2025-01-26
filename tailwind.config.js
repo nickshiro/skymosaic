@@ -15,6 +15,10 @@ export default {
 						bg: 'var(--input-selection-bg)',
 						text: 'var(--input-selection-text)'
 					}
+				},
+				button: {
+					bg: 'var(--button-bg)',
+					text: 'var(--button-text)'
 				}
 			},
 			backgroundColor: {

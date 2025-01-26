@@ -7,4 +7,6 @@
 	--input-bg: #f5f5f5;
 	--input-selection-bg: var(--primary-bg);
 	--input-selection-text: white;
+	--button-bg: var(--primary-bg);
+	--button-text: white;
 }

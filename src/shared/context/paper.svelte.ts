@@ -6,7 +6,11 @@ const paperContext = writable({
 	latitude: 59.855774,
 	longitude: 31.410969,
 	header: 'Under this sky, I found you',
-	subtitle: ''
+	subtitle: '',
+	color: {
+		text: 'FFFFFF',
+		background: '000000'
+	}
 });
 
 export { paperContext };

@@ -15,10 +15,13 @@
 </script>
 
 <aside
-	class="bottom-0] fixed left-0 top-0 z-50 box-border flex h-screen w-60 scale-100 transform flex-col items-stretch justify-between overflow-hidden border-r border-border bg-secondary"
+	class="fixed bottom-0 left-0 top-0 z-50 box-border flex h-screen w-60 scale-100 transform flex-col items-stretch justify-between overflow-hidden border-r border-border bg-secondary"
 >
 	<div>
-		<h1 class="select-none py-2 pl-4 font-primary text-xl">Skymosaic</h1>
+		<div class="flex py-2 pl-4">
+			<img class="mr-2 mt-[2px] h-6 w-6" src="icons/icon.svg" alt="Star" />
+			<h1 class="select-none font-primary text-xl font-medium">Skymosaic</h1>
+		</div>
 		<Hr />
 		<div class="mb-3">
 			<Header>Coordinates</Header>

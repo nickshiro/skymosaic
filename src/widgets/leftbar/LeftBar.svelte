@@ -5,7 +5,8 @@
 	import { DateInput } from '@shared/ui/date-input';
 	import { TimeInput } from '@shared/ui/time-input';
 	import { Hr } from '@shared/ui/hr';
-	import { paperContext } from '@shared/context/paper.svelte';
+	import { Button } from '@shared/ui/button';
+	import { paperContext, resetPaper } from '@shared/context/paper.svelte';
 
 	let context;
 	paperContext.subscribe((value) => {
@@ -14,10 +15,10 @@
 </script>
 
 <aside
-	class="border-border bottom-0] fixed left-0 top-0 z-50 box-border flex h-screen w-60 scale-100 transform flex-col items-stretch justify-between overflow-hidden border-r bg-secondary"
+	class="bottom-0] fixed left-0 top-0 z-50 box-border flex h-screen w-60 scale-100 transform flex-col items-stretch justify-between overflow-hidden border-r border-border bg-secondary"
 >
 	<div>
-		<h1 class="font-primary select-none py-2 pl-4 text-xl">Skymosaic</h1>
+		<h1 class="select-none py-2 pl-4 font-primary text-xl">Skymosaic</h1>
 		<Hr />
 		<div class="mb-3">
 			<Header>Coordinates</Header>
@@ -48,7 +49,15 @@
 			<Subtitle>Subtitle</Subtitle>
 			<TextInput identifier="subtitle" maxlength={80} icon="T"></TextInput>
 		</div>
-		<!-- <div>{$paperContext.date}</div> -->
 		<Hr />
+	</div>
+	<div>
+		{#if $paperContext.changed}
+			<Hr />
+			<Header>Reset paper</Header>
+			<div class="mb-4">
+				<Button onClick={resetPaper}>Set default</Button>
+			</div>
+		{/if}
 	</div>
 </aside>

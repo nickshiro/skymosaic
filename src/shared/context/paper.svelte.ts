@@ -50,9 +50,13 @@ if (typeof window !== 'undefined') {
 }
 
 const resetPaper = () => {
-	paperContext.set({ ...defaultState, changed: false });
-	if (typeof window !== 'undefined') {
-		localStorage.removeItem('paperState');
+	if (
+		confirm('Are you sure you want to reset the paper settings? All unsaved changes will be lost')
+	) {
+		paperContext.set({ ...defaultState, changed: false });
+		if (typeof window !== 'undefined') {
+			localStorage.removeItem('paperState');
+		}
 	}
 };
 

@@ -40,8 +40,12 @@
 	<div>
 		<div class="mb-3">
 			<Header>Colors</Header>
-			<Subtitle>Latitude</Subtitle>
+			<Subtitle>Background</Subtitle>
 			<ColorInput identifier="background" />
+		</div>
+		<div class="mb-3">
+			<Subtitle>Text</Subtitle>
+			<ColorInput identifier="text" />
 		</div>
 	</div>
 	<div>

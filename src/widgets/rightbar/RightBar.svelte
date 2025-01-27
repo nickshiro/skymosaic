@@ -8,6 +8,7 @@
 	import { PaperSize } from '@features/export';
 	import { onMount } from 'svelte';
 	import { Button } from '@shared/ui/button';
+	import { ColorInput } from '@shared/ui/color-input';
 
 	let exporter: PaperExporter | null = null;
 
@@ -40,7 +41,7 @@
 		<div class="mb-3">
 			<Header>Colors</Header>
 			<Subtitle>Latitude</Subtitle>
-			<!-- <TextInput maxlength={10} icon="Y"></TextInput> -->
+			<ColorInput identifier="background" />
 		</div>
 	</div>
 	<div>

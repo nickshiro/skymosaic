@@ -1,9 +1,6 @@
 import html2canvas from 'html2canvas';
-
-interface PaperDimensions {
-	width: number;
-	height: number;
-}
+import { paperContext } from '@shared/context/paper.svelte';
+import { get } from 'svelte/store';
 
 export enum PaperSize {
 	A6 = 'A6',
@@ -13,7 +10,7 @@ export enum PaperSize {
 	A2 = 'A2'
 }
 
-const PaperDimensionsMap: { [key in PaperSize]: PaperDimensions } = {
+const PaperDimensionsMap: { [key in PaperSize]: { width: number; height: number } } = {
 	[PaperSize.A6]: { width: 1240, height: 1748 },
 	[PaperSize.A5]: { width: 1748, height: 2480 },
 	[PaperSize.A4]: { width: 2480, height: 3508 },
@@ -22,13 +19,8 @@ const PaperDimensionsMap: { [key in PaperSize]: PaperDimensions } = {
 };
 
 export class PaperExporter {
-	private element: HTMLDivElement;
-
-	constructor(element: HTMLDivElement) {
-		if (!element) {
-			console.error(`Element for export not found`);
-		}
-		this.element = element;
+	constructor(private element: HTMLDivElement) {
+		if (!element) console.error('Element for export not found');
 	}
 
 	public async export(
@@ -36,10 +28,12 @@ export class PaperExporter {
 		fileName: string = 'skymosaic.png'
 	): Promise<void> {
 		const scale = PaperDimensionsMap[paperSize].width / this.element.offsetWidth;
+		const { background } = get(paperContext);
 
 		const canvas = await html2canvas(this.element, {
-			scale: scale,
+			scale,
 			useCORS: true,
+			backgroundColor: background,
 			logging: false
 		});
 

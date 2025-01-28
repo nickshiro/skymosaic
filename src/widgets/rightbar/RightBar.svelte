@@ -35,9 +35,10 @@
 </script>
 
 <aside
-	class="fixed bottom-0 right-0 top-0 z-50 box-border flex h-screen w-60 scale-100 transform flex-col items-stretch justify-between overflow-hidden border-r border-border bg-secondary"
+	class="z-50 box-border flex scale-100 transform flex-col items-stretch overflow-hidden border-r border-border bg-secondary lg:h-screen lg:justify-between"
 >
 	<div>
+		<Hr />
 		<div class="mb-3">
 			<Header>Colors</Header>
 			<Subtitle>Background</Subtitle>

@@ -4,12 +4,16 @@
 	import { RightBar } from '@widgets/rightbar';
 </script>
 
-<div class="relative h-screen justify-between bg-primary">
-	<LeftBar />
-	<main class="flex h-screen items-center justify-center">
+<div class="bg-primary lg:relative lg:h-screen">
+	<div class="z-50 lg:fixed lg:bottom-0 lg:left-0 lg:top-0 lg:w-60">
+		<LeftBar />
+	</div>
+	<main class="flex h-[80vh] items-center justify-center self-start lg:flex lg:h-[90vh]">
 		<div class="h-[90%]">
 			<Paper />
 		</div>
 	</main>
-	<RightBar />
+	<div class="z-50 lg:fixed lg:bottom-0 lg:right-0 lg:top-0 lg:w-60">
+		<RightBar />
+	</div>
 </div>

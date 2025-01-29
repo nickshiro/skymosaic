@@ -92,7 +92,6 @@
 					);
 
 					map.addChild(marker);
-					console.log(e);
 				}
 			}
 		} catch (error) {

@@ -7,6 +7,7 @@
 	import { Hr } from '@shared/ui/hr';
 	import { Button } from '@shared/ui/button';
 	import { paperContext, resetPaper } from '@shared/context/paper.svelte';
+	import { openPopup } from '@shared/context/popup.svelte';
 
 	let context;
 	paperContext.subscribe((value) => {
@@ -29,9 +30,12 @@
 			<Subtitle>Latitude</Subtitle>
 			<TextInput maxlength={10} identifier="latitude" icon="Y"></TextInput>
 		</div>
-		<div class="mb-4 mt-2">
+		<div class="mb-2 mt-2">
 			<Subtitle>Longitude</Subtitle>
 			<TextInput maxlength={11} identifier="longitude" icon="X"></TextInput>
+		</div>
+		<div class="mb-4">
+			<Button onClick={openPopup}>Open map</Button>
 		</div>
 		<div class="mb-3 mt-2">
 			<Hr />

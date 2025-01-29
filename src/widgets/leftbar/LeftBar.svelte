@@ -26,7 +26,7 @@
 		</div>
 		<Hr />
 		<div class="mb-3">
-			<Header>Coordinates</Header>
+			<Header>Location</Header>
 			<Subtitle>Latitude</Subtitle>
 			<TextInput maxlength={10} identifier="latitude" icon="Y"></TextInput>
 		</div>

@@ -12,6 +12,9 @@
 	id="paper"
 	style={`background-color: ${$paperContext.background}`}
 >
+	<div class="absolute left-0 top-0 w-full py-[5%]">
+		<div class="mx-auto aspect-square w-[80%] rounded-full bg-white"></div>
+	</div>
 	<div class="absolute bottom-0 left-0 h-[35%] w-full items-center">
 		<h1
 			class="mx-auto max-w-[80%] break-words text-center font-primary text-[2vmin]"

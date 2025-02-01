@@ -20,6 +20,7 @@
 				{
 					date: new Date('2023-01-01T12:00:00Z')
 				},
+				// config is something like this, maybe become default for skymap
 				{
 					constellations: {
 						lines: {
@@ -48,8 +49,18 @@
 					}
 				}
 			);
-			// do something like this to update bg color
-			// skymap.config.bgColor = $paperContext.background;
+			/**
+			 * do something like this to update bg color
+			 * skymap.config.bgColor = $paperContext.background;
+			 *
+			 * to update date
+			 * skymap.setDate(<actual date object>);
+			 *
+			 * to update location
+			 * skymap.setLocationWithAnimation(30, -50, 500, () => {
+			 *	 // callback for animations steps, now required (ILL FIX IT LATER)
+			 * });
+			 */
 		}
 	});
 </script>
@@ -59,7 +70,6 @@
 	id="paper"
 	style={`background-color: ${$paperContext.background}`}
 >
-	<div class="absolute left-0 top-0 w-full py-[5%]"></div>
 	<div class="absolute left-0 top-0 w-full py-[5%]">
 		<div bind:this={skymapContainer} class="mx-auto aspect-square w-[80%]"></div>
 	</div>
